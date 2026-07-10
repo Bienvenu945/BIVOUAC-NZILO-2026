@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIVOUAC 2026 — KIRO Nzilo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1F2B1C;
+    --forest-deep:#141C11;
+    --khaki:#E9E0C6;
+    --khaki-light:#F4EFDD;
+    --marigold:#C9541E;
+    --marigold-light:#E8813C;
+    --sky:#2E5C8A;
+    --bark:#3D2817;
+    --ink:#20200f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--khaki-light);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    overflow-x:hidden;
+  }
+  h1,h2,h3, .display{
+    font-family:'Anton', sans-serif;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    font-weight:400;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+
+  /* texture */
+  .canvas-bg{
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(0,0,0,0.03) 0, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(0,0,0,0.03) 0, transparent 40%);
+  }
+
+  /* NAV */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 6vw;
+    background:rgba(20,28,17,0.88);
+    backdrop-filter:blur(6px);
+    border-bottom:2px solid var(--marigold);
+  }
+  .brand{
+    color:var(--khaki-light);
+    font-family:'Anton',sans-serif;
+    font-size:1.1rem;
+    letter-spacing:0.08em;
+  }
+  .brand span{color:var(--marigold-light);}
+  nav .links{display:flex; gap:22px; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase;}
+  nav .links a{color:var(--khaki); text-decoration:none; opacity:0.85; transition:opacity .2s;}
+  nav .links a:hover{opacity:1; color:var(--marigold-light);}
+  @media (max-width:640px){ nav .links{display:none;} }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+    background:
+      linear-gradient(180deg, rgba(20,28,17,0.55) 0%, rgba(20,28,17,0.78) 60%, var(--forest-deep) 100%),
+      url('images/marche1.jpg') center 30%/cover no-repeat;
+    padding:120px 6vw 80px;
+    color:var(--khaki-light);
+  }
+  .eyebrow{
+    font-family:'Anton',sans-serif;
+    font-size:0.78rem;
+    letter-spacing:0.35em;
+    color:var(--marigold-light);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 8vw, 6rem);
+    line-height:0.95;
+    color:var(--khaki-light);
+    text-shadow:0 4px 24px rgba(0,0,0,0.4);
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--marigold-light);
+    display:block;
+  }
+  .hero .sub{
+    margin-top:22px;
+    font-size:1.05rem;
+    max-width:520px;
+    line-height:1.6;
+    color:var(--khaki);
+    opacity:0.95;
+  }
+  .hero .place{
+    margin-top:10px;
+    font-size:0.95rem;
+    color:var(--marigold-light);
+    letter-spacing:0.05em;
+    font-weight:600;
+  }
+
+  /* COUNTDOWN — style tampon / badge de camp */
+  .countdown-wrap{
+    margin-top:48px;
+    display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
+  }
+  .badge{
+    position:relative;
+    width:104px; height:104px;
+    border:3px solid var(--marigold);
+    border-radius:50%;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:rgba(233,224,198,0.06);
+    box-shadow: inset 0 0 0 3px rgba(232,129,60,0.25);
+  }
+  .badge .num{
+    font-family:'Anton', sans-serif;
+    font-size:2.1rem;
+    color:var(--khaki-light);
+    line-height:1;
+  }
+  .badge .lab{
+    font-size:0.62rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--marigold-light);
+    margin-top:4px;
+  }
+  @media (max-width:520px){
+    .badge{width:78px; height:78px;}
+    .badge .num{font-size:1.5rem;}
+  }
+
+  .cta-row{
+    margin-top:40px;
+    display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
+  }
+  .btn{
+    display:inline-block;
+    padding:14px 30px;
+    font-family:'Anton',sans-serif;
+    font-size:0.85rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    text-decoration:none;
+    border-radius:2px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:var(--marigold); color:var(--khaki-light);}
+  .btn-ghost{border:2px solid var(--khaki); color:var(--khaki-light);}
+  .btn:hover{transform:translateY(-2px);}
+
+  /* rope divider */
+  .divider{
+    height:26px;
+    background-image: repeating-linear-gradient(135deg, var(--marigold) 0 10px, transparent 10px 20px);
+    opacity:0.9;
+  }
+
+  /* SECTION: infos pratiques */
+  .section{padding:90px 6vw; max-width:1180px; margin:0 auto;}
+  .section-head{margin-bottom:48px; text-align:center;}
+  .section-head .eyebrow{color:var(--marigold);}
+  .section-head h2{font-size:clamp(1.8rem,5vw,3rem); color:var(--forest);}
+
+  .info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:2px;
+    background:var(--forest);
+    border:2px solid var(--forest);
+  }
+  .info-card{
+    background:var(--khaki-light);
+    padding:34px 26px;
+  }
+  .info-card .tag{
+    font-family:'Anton',sans-serif;
+    font-size:0.7rem;
+    letter-spacing:0.2em;
+    color:var(--marigold);
+    margin-bottom:10px;
+  }
+  .info-card h3{font-size:1.3rem; color:var(--forest); margin-bottom:10px;}
+  .info-card p{font-size:0.92rem; line-height:1.6; color:#3a3a2c;}
+
+  /* ABOUT */
+  .about{
+    background:var(--forest);
+    color:var(--khaki-light);
+  }
+  .about-inner{
+    max-width:760px; margin:0 auto; text-align:center;
+  }
+  .about p{font-size:1.05rem; line-height:1.8; color:var(--khaki); margin-bottom:16px;}
+  .about strong{color:var(--marigold-light);}
+
+  /* GALLERY */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-auto-rows:200px;
+    gap:8px;
+  }
+  .gallery-grid figure{
+    overflow:hidden; position:relative; margin:0; background:var(--bark);
+  }
+  .gallery-grid img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .gallery-grid figure:hover img{transform:scale(1.08);}
+  .g-tall{grid-row:span 2;}
+  .g-wide{grid-column:span 2;}
+  @media (max-width:760px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr); grid-auto-rows:150px;}
+    .g-wide{grid-column:span 2;}
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--forest-deep);
+    color:var(--khaki);
+    padding:56px 6vw 34px;
+    text-align:center;
+  }
+  footer h3{color:var(--khaki-light); font-size:1.4rem; margin-bottom:10px;}
+  footer p{font-size:0.9rem; opacity:0.8; line-height:1.7; max-width:480px; margin:0 auto;}
+  footer .foot-brand{
+    margin-top:34px; font-family:'Anton',sans-serif; letter-spacing:0.15em;
+    font-size:0.75rem; color:var(--marigold-light); opacity:0.8;
+  }
+
+  ::selection{background:var(--marigold); color:var(--khaki-light);}
+</style>
+</head>
+<body class="canvas-bg">
+
+<nav>
+  <div class="brand">KIRO <span>BAKANJA</span></div>
+  <div class="links">
+    <a href="#compte-a-rebours">Compte à rebours</a>
+    <a href="#infos">Infos</a>
+    <a href="#a-propos">À propos</a>
+    <a href="#galerie">Galerie</a>
+  </div>
+</nav>
+
+<section class="hero" id="compte-a-rebours">
+  <div class="eyebrow">Diocèse de Kolwezi · Paroisse Sainte Barbe et Saint Éloi</div>
+  <h1>BIVOUAC<em>Nzilo 2026</em></h1>
+  <p class="sub">Une semaine de foi, de fraternité et d'aventure dans la nature, avec le mouvement des jeunes chrétiens catholiques KIRO Congo.</p>
+  <p class="place">📍 Cité de Nzilo · 10 — 16 Août 2026</p>
+
+  <div class="countdown-wrap" id="countdown">
+    <div class="badge"><div class="num" id="cd-days">00</div><div class="lab">Jours</div></div>
+    <div class="badge"><div class="num" id="cd-hours">00</div><div class="lab">Heures</div></div>
+    <div class="badge"><div class="num" id="cd-mins">00</div><div class="lab">Min</div></div>
+    <div class="badge"><div class="num" id="cd-secs">00</div><div class="lab">Sec</div></div>
+  </div>
+
+  <div class="cta-row">
+    <a href="#infos" class="btn btn-primary">Infos pratiques</a>
+    <a href="#galerie" class="btn btn-ghost">Voir les photos</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="infos">
+  <div class="section-head">
+    <div class="eyebrow">Infos pratiques</div>
+    <h2>Ce qu'il faut savoir</h2>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="tag">01 · Dates</div>
+      <h3>10 — 16 Août 2026</h3>
+      <p>Une semaine complète de bivouac, du lundi au dimanche.</p>
+    </div>
+    <div class="info-card">
+      <div class="tag">02 · Lieu</div>
+      <h3>Cité de Nzilo</h3>
+      <p>Territoire de Mutshatsha, non loin de Kolwezi, Lualaba.</p>
+    </div>
+    <div class="info-card">
+      <div class="tag">03 · Organisateur</div>
+      <h3>Groupe KIRO Bakanja</h3>
+      <p>Décanat de Kolwezi, Paroisse Sainte Barbe et Saint Éloi.</p>
+    </div>
+    <div class="info-card">
+      <div class="tag">04 · Contact</div>
+      <h3>Inscriptions</h3>
+      <p>30 000 Fc par membres.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="a-propos">
+  <div class="section">
+    <div class="about-inner">
+      <div class="eyebrow" style="color:var(--marigold-light)">À propos du Bivouac</div>
+      <h2 style="color:var(--khaki-light); margin-bottom:24px;">Vivre sa foi, en pleine nature</h2>
+      <p>Le <strong>Bivouac</strong> est le grand rassemblement annuel des jeunes KIRO de la paroisse <strong>Sainte Barbe et Saint Éloi</strong>. Une semaine loin du quotidien, rythmée par la prière, les jeux, les chants, les feux de camp et la vie communautaire.</p>
+      <p>C'est l'occasion de grandir ensemble dans la foi, de tisser des liens fraternels et de vivre pleinement l'esprit scout et chrétien du mouvement KIRO Congo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="galerie">
+  <div class="section-head">
+    <div class="eyebrow">Souvenirs</div>
+    <h2>La vie du groupe en images</h2>
+  </div>
+  <div class="gallery-grid">
+    <figure class="g-tall g-wide"><img src="images/marche2.jpg" alt="Défilé des jeunes KIRO"></figure>
+    <figure><img src="images/tambours1.jpg" alt="Fanfare KIRO"></figure>
+    <figure><img src="images/portrait1.jpg" alt="Jeune KIRO en uniforme"></figure>
+    <figure class="g-tall"><img src="images/tambours4.jpg" alt="Tambours du défilé"></figure>
+    <figure class="g-wide"><img src="images/defile3.jpg" alt="Groupe en marche"></figure>
+    <figure><img src="images/groupe1.jpg" alt="Fanfare et tambours"></figure>
+    <figure><img src="images/tambours2.jpg" alt="Percussionniste KIRO"></figure>
+    <figure class="g-wide"><img src="images/defile1.jpg" alt="Jeunes en défilé"></figure>
+    <figure><img src="images/groupe3.jpg" alt="Jeunes KIRO rassemblés"></figure>
+    <figure class="g-tall"><img src="images/tambours3.jpg" alt="Tambour bleu"></figure>
+    <figure class="g-wide"><img src="images/defile2.jpg" alt="Marche des scouts"></figure>
+  </div>
+</section>
+
+<footer>
+  <h3>KIRO Congo — Bakanja</h3>
+  <p>Diocèse de Kolwezi · Décanat de Kolwezi · Paroisse Sainte Barbe et Saint Éloi</p>
+  <div class="foot-brand">Bivouac Nzilo · 10 — 16 Août 2026</div>
+</footer>
+
+<script>
+  // Date du bivouac : 10 août 2026, 08h00 (heure de Kolwezi, UTC+2)
+  const eventDate = new Date("2026-08-10T08:00:00+02:00").getTime();
+
+  function updateCountdown(){
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+
+    const dEl = document.getElementById('cd-days');
+    const hEl = document.getElementById('cd-hours');
+    const mEl = document.getElementById('cd-mins');
+    const sEl = document.getElementById('cd-secs');
+
+    if(diff <= 0){
+      dEl.textContent = "00"; hEl.textContent = "00"; mEl.textContent = "00"; sEl.textContent = "00";
+      document.querySelector('.sub').textContent = "Le Bivouac a commencé — bonne semaine à Nzilo !";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const secs = Math.floor((diff % (1000*60)) / 1000);
+
+    dEl.textContent = String(days).padStart(2,'0');
+    hEl.textContent = String(hours).padStart(2,'0');
+    mEl.textContent = String(mins).padStart(2,'0');
+    sEl.textContent = String(secs).padStart(2,'0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
