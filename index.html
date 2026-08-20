@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BIVOUAC 2026 — KIRO Nzilo</title>
+<meta name="description" content="Bivouac KIRO Nzilo 2026 — retraite des jeunes chrétiens catholiques KIRO Congo, Paroisse Sainte Barbe et Saint Éloi, du 9 au 16 août 2026 à Nzilo.">
+<meta property="og:title" content="BIVOUAC Nzilo 2026 — KIRO Bakanja">
+<meta property="og:description" content="Une semaine de foi, de fraternité et d'aventure dans la nature avec KIRO Congo, du 9 au 16 août 2026 à Nzilo.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/photo_153.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -71,7 +77,7 @@
     text-align:center;
     background:
       linear-gradient(180deg, rgba(20,28,17,0.55) 0%, rgba(20,28,17,0.78) 60%, var(--forest-deep) 100%),
-      url('images/marche1.jpg') center 30%/cover no-repeat;
+      url('images/photo_001.jpg') center 30%/cover no-repeat;
     padding:120px 6vw 80px;
     color:var(--khaki-light);
   }
@@ -242,13 +248,46 @@
   }
 
   ::selection{background:var(--marigold); color:var(--khaki-light);}
+
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+  .skip-link{
+    position:absolute; left:-999px; top:0; z-index:100;
+    background:var(--marigold); color:var(--khaki-light);
+    padding:10px 18px; text-decoration:none; font-size:0.85rem;
+  }
+  .skip-link:focus{left:6px; top:6px;}
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--marigold-light); outline-offset:2px;
+  }
+
+  .nav-toggle{
+    display:none;
+    background:none; border:2px solid var(--khaki); color:var(--khaki-light);
+    font-size:1.1rem; padding:6px 12px; cursor:pointer; border-radius:2px;
+  }
+  @media (max-width:640px){
+    .nav-toggle{display:block;}
+    nav .links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; gap:0; background:rgba(20,28,17,0.97);
+      padding:8px 0;
+    }
+    nav .links.open{display:flex;}
+    nav .links a{padding:14px 6vw; border-top:1px solid rgba(255,255,255,0.08);}
+  }
 </style>
 </head>
 <body class="canvas-bg">
 
-<nav>
+<a href="#main" class="skip-link">Aller au contenu</a>
+
+<nav role="navigation" aria-label="Navigation principale">
   <div class="brand">KIRO <span>BAKANJA</span></div>
-  <div class="links">
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">☰</button>
+  <div class="links" id="nav-links">
     <a href="#compte-a-rebours">Compte à rebours</a>
     <a href="#infos">Infos</a>
     <a href="#a-propos">À propos</a>
@@ -256,21 +295,14 @@
   </div>
 </nav>
 
-<section class="hero" id="compte-a-rebours">
+<section class="hero" id="compte-a-rebours" role="main" aria-label="Introduction"><span id="main"></span>
   <div class="eyebrow">Diocèse de Kolwezi · Paroisse Sainte Barbe et Saint Éloi</div>
   <h1>BIVOUAC<em>Nzilo 2026</em></h1>
-  <p class="sub">Une semaine de foi, de fraternité et d'aventure dans la nature, avec le Groupe KIRO BAKANJA.</p>
-  <p class="place">📍 Cité de Nzilo · 10 — 16 Août 2026</p>
-
-  <div class="countdown-wrap" id="countdown">
-    <div class="badge"><div class="num" id="cd-days">00</div><div class="lab">Jours</div></div>
-    <div class="badge"><div class="num" id="cd-hours">00</div><div class="lab">Heures</div></div>
-    <div class="badge"><div class="num" id="cd-mins">00</div><div class="lab">Min</div></div>
-    <div class="badge"><div class="num" id="cd-secs">00</div><div class="lab">Sec</div></div>
-  </div>
+  <p class="sub">Une semaine de foi, de fraternité et d'aventure vécue dans la joie par le Groupe KIRO BAKANJA — un moment de très grande joie et de bonheur partagé, gravé dans nos cœurs.</p>
+  <p class="place">📍 Cité de Nzilo · 9 — 16 Août 2026 · Édition 2026 achevée</p>
 
   <div class="cta-row">
-    <a href="#infos" class="btn btn-primary">Infos pratiques</a>
+    <a href="#infos" class="btn btn-primary">Revivre l'édition</a>
     <a href="#galerie" class="btn btn-ghost">Voir les photos</a>
   </div>
 </section>
@@ -279,14 +311,14 @@
 
 <section class="section" id="infos">
   <div class="section-head">
-    <div class="eyebrow">Infos pratiques</div>
-    <h2>Ce qu'il faut savoir</h2>
+    <div class="eyebrow">Bilan de l'édition</div>
+    <h2>Ce qu'on a vécu ensemble</h2>
   </div>
   <div class="info-grid">
     <div class="info-card">
       <div class="tag">01 · Dates</div>
-      <h3>10 — 16 Août 2026</h3>
-      <p>Une semaine complète de bivouac, du lundi au dimanche.</p>
+      <h3>9 — 16 Août 2026</h3>
+      <p>Une semaine complète de bivouac, du dimanche au dimanche.</p>
     </div>
     <div class="info-card">
       <div class="tag">02 · Lieu</div>
@@ -299,9 +331,9 @@
       <p>Décanat de Kolwezi, Paroisse Sainte Barbe et Saint Éloi.</p>
     </div>
     <div class="info-card">
-      <div class="tag">04 · Contact</div>
-      <h3>Inscriptions</h3>
-      <p>30 000 Fc par membres.</p>
+      <div class="tag">04 · Ambiance</div>
+      <h3>Joie et fraternité</h3>
+      <p>Une semaine remplie de bonheur, de rires et de moments inoubliables entre jeunes KIRO.</p>
     </div>
   </div>
 </section>
@@ -310,9 +342,9 @@
   <div class="section">
     <div class="about-inner">
       <div class="eyebrow" style="color:var(--marigold-light)">À propos du Bivouac</div>
-      <h2 style="color:var(--khaki-light); margin-bottom:24px;">Vivre sa foi, en pleine nature</h2>
-      <p>Le <strong>Bivouac</strong> est le grand rassemblement annuel du groupe Kiro BAKANJA de la paroisse <strong>Sainte Barbe et Saint Éloi</strong>. Une semaine loin du quotidien, rythmée par la prière, les jeux, les chants, les feux de camp et la vie communautaire.</p>
-      <p>C'est l'occasion de grandir ensemble dans la foi, de tisser des liens fraternels et de vivre pleinement l'esprit chrétien du mouvement KIRO Congo.</p>
+      <h2 style="color:var(--khaki-light); margin-bottom:24px;">Une foi vécue en pleine nature</h2>
+      <p>Le <strong>Bivouac</strong> était le grand rassemblement annuel du groupe Kiro BAKANJA de la paroisse <strong>Sainte Barbe et Saint Éloi</strong>. Une semaine loin du quotidien, rythmée par la prière, les jeux, les chants, les feux de camp et la vie communautaire.</p>
+      <p>Ce fut un moment de très grande joie et de bonheur partagé : des liens fraternels renforcés, des rires, des chants et des souvenirs qui resteront gravés dans le cœur de chaque jeune KIRO présent à Nzilo.</p>
     </div>
   </div>
 </section>
@@ -324,59 +356,114 @@
     <div class="eyebrow">Souvenirs</div>
     <h2>La vie du groupe en images</h2>
   </div>
-  <div class="gallery-grid">
-    <figure class="g-tall g-wide"><img src="images/marche2.jpg" alt="Défilé des jeunes KIRO"></figure>
-    <figure><img src="images/tambours1.jpg" alt="Fanfare KIRO"></figure>
-    <figure><img src="images/portrait1.jpg" alt="Jeune KIRO en uniforme"></figure>
-    <figure class="g-tall"><img src="images/tambours4.jpg" alt="Tambours du défilé"></figure>
-    <figure class="g-wide"><img src="images/defile3.jpg" alt="Groupe en marche"></figure>
-    <figure><img src="images/groupe1.jpg" alt="Fanfare et tambours"></figure>
-    <figure><img src="images/tambours2.jpg" alt="Percussionniste KIRO"></figure>
-    <figure class="g-wide"><img src="images/defile1.jpg" alt="Jeunes en défilé"></figure>
-    <figure><img src="images/groupe3.jpg" alt="Jeunes KIRO rassemblés"></figure>
-    <figure class="g-tall"><img src="images/tambours3.jpg" alt="Tambour bleu"></figure>
-    <figure class="g-wide"><img src="images/defile2.jpg" alt="Marche des scouts"></figure>
+  <div class="gallery-grid" id="gallery-grid"></div>
+  <p id="gallery-status" style="text-align:center; margin-top:20px; color:#6b6b52; font-size:0.9rem;"></p>
+  <div style="text-align:center; margin-top:30px;">
+    <button id="gallery-load-more" class="btn btn-primary" style="display:none; border:none; cursor:pointer;">Voir plus de photos</button>
   </div>
 </section>
 
 <footer>
   <h3>KIRO Congo — Bakanja</h3>
   <p>Diocèse de Kolwezi · Décanat de Kolwezi · Paroisse Sainte Barbe et Saint Éloi</p>
-  <div class="foot-brand">Bivouac Nzilo · 10 — 16 Août 2026</div>
+  <p style="margin-top:14px; color:var(--marigold-light); font-weight:600;">Merci à tous ceux qui ont vécu cette belle édition 2026 dans la joie ! 🙏🎉</p>
+  <div class="foot-brand">Bivouac Nzilo · 9 — 16 Août 2026</div>
 </footer>
 
 <script>
-  // Date du bivouac : 10 août 2026, 08h00 (heure de Kolwezi, UTC+2)
-  const eventDate = new Date("2026-08-10T08:00:00+02:00").getTime();
-
-  function updateCountdown(){
-    const now = new Date().getTime();
-    const diff = eventDate - now;
-
-    const dEl = document.getElementById('cd-days');
-    const hEl = document.getElementById('cd-hours');
-    const mEl = document.getElementById('cd-mins');
-    const sEl = document.getElementById('cd-secs');
-
-    if(diff <= 0){
-      dEl.textContent = "00"; hEl.textContent = "00"; mEl.textContent = "00"; sEl.textContent = "00";
-      document.querySelector('.sub').textContent = "Le Bivouac a commencé — bonne semaine à Nzilo !";
-      return;
-    }
-
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const secs = Math.floor((diff % (1000*60)) / 1000);
-
-    dEl.textContent = String(days).padStart(2,'0');
-    hEl.textContent = String(hours).padStart(2,'0');
-    mEl.textContent = String(mins).padStart(2,'0');
-    sEl.textContent = String(secs).padStart(2,'0');
+  // Menu mobile (hamburger)
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if(navToggle && navLinks){
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('open', !isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('open');
+      });
+    });
   }
 
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+  // ===== Galerie automatique via l'API GitHub =====
+  // Dépose une photo dans le dossier images/, fais un commit, et elle apparaît ici toute seule.
+  (function(){
+    const GITHUB_USER = "bienvenu945";
+    const GITHUB_REPO = "BIVOUAC-NZILO-2026";
+    const IMAGES_FOLDER = "images";
+    const BATCH_SIZE = 12; // nombre de photos affichées par lot
+
+    // Liste de secours si l'API GitHub est indisponible (quota dépassé, hors-ligne, etc.)
+    const FALLBACK_IMAGES = Array.from({length: 12}, (_, i) =>
+      `photo_${String(i + 1).padStart(3, '0')}.jpg`
+    );
+
+    const grid = document.getElementById('gallery-grid');
+    const statusEl = document.getElementById('gallery-status');
+    const loadMoreBtn = document.getElementById('gallery-load-more');
+    const IMAGE_EXT = /\.(jpe?g|png|webp|gif)$/i;
+
+    let allImages = [];
+    let shownCount = 0;
+
+    function renderBatch(){
+      const next = allImages.slice(shownCount, shownCount + BATCH_SIZE);
+      next.forEach((filename, i) => {
+        const fig = document.createElement('figure');
+        // Variation de mise en page pour garder l'effet mosaïque
+        const pos = shownCount + i;
+        if(pos % 7 === 0) fig.className = 'g-tall g-wide';
+        else if(pos % 5 === 0) fig.className = 'g-wide';
+        else if(pos % 4 === 0) fig.className = 'g-tall';
+
+        const img = document.createElement('img');
+        img.src = `${IMAGES_FOLDER}/${filename}`;
+        img.alt = "Photo du Bivouac KIRO Nzilo";
+        img.loading = "lazy";
+        fig.appendChild(img);
+        grid.appendChild(fig);
+      });
+      shownCount += next.length;
+
+      if(shownCount < allImages.length){
+        loadMoreBtn.style.display = 'inline-block';
+      } else {
+        loadMoreBtn.style.display = 'none';
+      }
+      statusEl.textContent = allImages.length
+        ? `${shownCount} / ${allImages.length} photos affichées`
+        : "";
+    }
+
+    function useFallback(){
+      allImages = FALLBACK_IMAGES;
+      shownCount = 0;
+      grid.innerHTML = '';
+      renderBatch();
+    }
+
+    fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${IMAGES_FOLDER}`)
+      .then(res => {
+        if(!res.ok) throw new Error('API GitHub indisponible ou quota dépassé');
+        return res.json();
+      })
+      .then(files => {
+        allImages = files
+          .filter(f => f.type === 'file' && IMAGE_EXT.test(f.name))
+          .map(f => f.name)
+          .sort();
+        if(allImages.length === 0) throw new Error('Aucune image trouvée');
+        renderBatch();
+      })
+      .catch(() => {
+        useFallback();
+      });
+
+    loadMoreBtn.addEventListener('click', renderBatch);
+  })();
 </script>
 
 </body>
