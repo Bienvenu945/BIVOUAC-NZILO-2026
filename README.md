@@ -1,4 +1,4 @@
-🏕️ BIVOUAC Nzilo 2026
+🏕️ ##BIVOUAC Nzilo 2026##
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/communes/plus_822.jpg" alt="Bivouac Nzilo 2026" width="100%">
@@ -75,44 +75,38 @@ Les photographies sont organisées dans six sous-dossiers distincts. Voici un ap
 
 📁 Structure du dépôt
 
-```BIVOUAC-NZILO-2026/
-|
-|-- .gitattributes
-|-- index.html
-|-- README.md
-|
-`-- images/
-    |
-    |-- communes/
-    |   |-- plus_822.jpg
-    |   |-- photo_035.JPG
-    |   |-- photo_063.JPG
-    |   `-- ...
-    |
-    |-- bakayouki/
-    |   |-- photo_062.JPG
-    |   |-- photo_064.JPG
-    |   `-- ...
-    |
-    |-- youpi/
-    |   |-- photo_006.JPG
-    |   |-- photo_009.JPG
-    |   `-- ...
-    |
-    |-- gen/
-    |   |-- photo_030.JPG
-    |   |-- photo_036.JPG
-    |   `-- ...
-    |
-    |-- aspirant/
-    |   |-- photo_001.JPG
-    |   |-- photo_002.JPG
-    |   `-- ...
-    |
-    `-- dirigeant/
-        |-- photo_005.JPG
-        |-- photo_014.JPG
-        `-- ...```
+```
+BIVOUAC-NZILO-2026/
+├── .gitattributes
+├── index.html
+├── README.md
+└── images/
+    ├── communes/
+    │   ├── plus_822.jpg
+    │   ├── photo_035.JPG
+    │   ├── photo_063.JPG
+    │   └── ...
+    ├── bakayouki/
+    │   ├── photo_062.JPG
+    │   ├── photo_064.JPG
+    │   └── ...
+    ├── youpi/
+    │   ├── photo_006.JPG
+    │   ├── photo_009.JPG
+    │   └── ...
+    ├── gen/
+    │   ├── photo_030.JPG
+    │   ├── photo_036.JPG
+    │   └── ...
+    ├── aspirant/
+    │   ├── photo_001.JPG
+    │   ├── photo_002.JPG
+    │   └── ...
+    └── dirigeant/
+        ├── photo_005.JPG
+        ├── photo_014.JPG
+        └── ...
+```
 
 Arborescence simplifiée : les fichiers présentés sont des exemples. Les points de suspension représentent les autres photographies du dépôt.
 
@@ -126,11 +120,11 @@ La galerie est conçue pour récupérer les images depuis GitHub. Pour ajouter d
 4. Vérifie le site en ligne après le déploiement.
 
 Exemple en ligne de commande :
-
+```
 git add images/
 git commit -m "Ajout de nouvelles photos"
 git push
-
+```
 Aucune modification de "index.html" n'est nécessaire pour les ajouts ordinaires, tant que les photos sont placées dans les dossiers pris en charge par la galerie.
 
 Le chargement des images est effectué progressivement afin de limiter le poids affiché au premier chargement. En cas d'indisponibilité de l'API GitHub, le comportement de secours prévu par le site peut prendre le relais.
@@ -151,7 +145,7 @@ Typographies :
 L'interface est responsive et comprend un menu mobile ainsi que plusieurs améliorations d'accessibilité.
 
 🛠️ Technologies utilisées
-
+```
 Technologie| Utilisation
 HTML5| Structure et contenu du site
 CSS3| Mise en page, couleurs et adaptation aux écrans
@@ -159,19 +153,19 @@ JavaScript| Interactions et chargement dynamique de la galerie
 GitHub Contents API| Récupération des contenus du dépôt
 GitHub Pages| Hébergement gratuit du site
 Google Fonts| Chargement des polices Anton et Karla
-
+```
 Le site est construit autour d'un fichier principal "index.html" qui regroupe le HTML, le CSS et le JavaScript. Aucune installation de dépendances n'est nécessaire.
 
 ✏️ Personnalisation
 
 Pour modifier le contenu du site, ouvre "index.html".
-
+```
 - Informations pratiques : section "#infos".
 - Présentation de l'événement : section "#a-propos".
 - Galerie : section "#galerie" et son code JavaScript.
 - Couleurs : règles CSS définies dans le fichier.
 - Navigation mobile : code HTML, CSS et JavaScript du menu.
-
+```
 Pour modifier une catégorie, veille à conserver la cohérence entre son nom, son dossier et la logique de chargement des images.
 
 🚀 Hébergement
