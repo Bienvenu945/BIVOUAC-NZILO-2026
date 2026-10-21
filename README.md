@@ -76,37 +76,45 @@ Les photographies sont organisées dans six sous-dossiers distincts. Voici un ap
 📁 Structure du dépôt
 
 BIVOUAC-NZILO-2026/
-├── .gitattributes
-├── index.html
-├── README.md
-└── images/
-    ├── communes/
-    │   ├── plus_822.jpg
-    │   ├── photo_035.JPG
-    │   ├── photo_063.JPG
-    │   └── ...
-    ├── bakayouki/
-    │   ├── photo_062.JPG
-    │   ├── photo_064.JPG
-    │   └── ...
-    ├── youpi/
-    │   ├── photo_006.JPG
-    │   ├── photo_009.JPG
-    │   └── ...
-    ├── gen/
-    │   ├── photo_030.JPG
-    │   ├── photo_036.JPG
-    │   └── ...
-    ├── aspirant/
-    │   ├── photo_001.JPG
-    │   ├── photo_002.JPG
-    │   └── ...
-    └── dirigeant/
-        ├── photo_005.JPG
-        ├── photo_014.JPG
-        └── ...
+|
+|-- .gitattributes
+|-- index.html
+|-- README.md
+|
+`-- images/
+    |
+    |-- communes/
+    |   |-- plus_822.jpg
+    |   |-- photo_035.JPG
+    |   |-- photo_063.JPG
+    |   `-- ...
+    |
+    |-- bakayouki/
+    |   |-- photo_062.JPG
+    |   |-- photo_064.JPG
+    |   `-- ...
+    |
+    |-- youpi/
+    |   |-- photo_006.JPG
+    |   |-- photo_009.JPG
+    |   `-- ...
+    |
+    |-- gen/
+    |   |-- photo_030.JPG
+    |   |-- photo_036.JPG
+    |   `-- ...
+    |
+    |-- aspirant/
+    |   |-- photo_001.JPG
+    |   |-- photo_002.JPG
+    |   `-- ...
+    |
+    `-- dirigeant/
+        |-- photo_005.JPG
+        |-- photo_014.JPG
+        `-- ...
 
-Arborescence illustrative : les fichiers affichés sont des exemples, et les points de suspension représentent les autres photographies présentes dans les dossiers.
+Arborescence simplifiée : les fichiers présentés sont des exemples. Les points de suspension représentent les autres photographies du dépôt.
 
 📸 Ajouter de nouvelles photographies
 
