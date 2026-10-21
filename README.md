@@ -75,7 +75,7 @@ Les photographies sont organisées dans six sous-dossiers distincts. Voici un ap
 
 📁 Structure du dépôt
 
-BIVOUAC-NZILO-2026/
+```BIVOUAC-NZILO-2026/
 |
 |-- .gitattributes
 |-- index.html
@@ -112,7 +112,7 @@ BIVOUAC-NZILO-2026/
     `-- dirigeant/
         |-- photo_005.JPG
         |-- photo_014.JPG
-        `-- ...
+        `-- ...```
 
 Arborescence simplifiée : les fichiers présentés sont des exemples. Les points de suspension représentent les autres photographies du dépôt.
 
