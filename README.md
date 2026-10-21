@@ -72,7 +72,7 @@ Les photographies sont organisées dans six sous-dossiers distincts. Voici un ap
 ### 4. GEN
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/gen/photo_030.JPG" alt="Catégorie Gen" width="80%">
+  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/gen/plus_1093.JPG" alt="Catégorie Gen" width="80%">
 </p>
 
 **Dossier :** `images/gen/`
