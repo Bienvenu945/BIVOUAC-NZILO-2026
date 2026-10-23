@@ -1,0 +1,12 @@
+{
+  "name": "Bivouac Nzilo 2026 — KIRO Bakanja",
+  "short_name": "Bivouac Nzilo",
+  "description": "Photos et souvenirs du Bivouac KIRO Bakanja à Nzilo.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#E8EEEA",
+  "theme_color": "#0E2F2C",
+  "icons": []
+}
