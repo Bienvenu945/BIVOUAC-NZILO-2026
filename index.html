@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0E2F2C">
+<title>Bivouac Nzilo 2026 — KIRO Bakanja</title>
+<meta name="description" content="Bivouac KIRO Nzilo 2026 : une semaine de foi, de fraternité et d'aventure, du 9 au 16 août à Nzilo, avec le groupe KIRO Bakanja de la paroisse Sainte Barbe et Saint Éloi.">
+<meta property="og:title" content="Bivouac Nzilo 2026 — KIRO Bakanja">
+<meta property="og:description" content="Une semaine de foi, de fraternité et d'aventure, du 9 au 16 août 2026 à Nzilo.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="features.css">
+</head>
+<body>
+<a class="skip" href="#infos">Aller au contenu</a>
+
+<header class="top">
+  <a class="brand" href="#">KIRO Bakanja</a>
+  <nav aria-label="Navigation principale">
+    <a href="#infos">L'édition</a>
+    <a href="#galeries">Les photos</a>
+    <a href="#livre-or">Livre d'or</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-label="Introduction">
+    <h1>Bivouac<br>Nzilo 2026</h1>
+    <p class="hero-sub">Du 9 au 16 août, une semaine de foi, de fraternité et d'aventure. Choisis ta section pour revoir les photos, ou <a href="#vos-photos">partage les tiennes</a>.</p>
+    <div class="bars" id="bars"></div>
+  </section>
+
+  <section class="info" id="infos">
+    <p class="dates">9 au 16 août 2026</p>
+    <div class="info-text">
+      <p>Le Bivouac est le grand rassemblement annuel du groupe KIRO Bakanja de la paroisse Sainte Barbe et Saint Éloi. Une semaine loin du quotidien, rythmée par la prière, les jeux, les chants, les feux de camp et la vie en communauté.</p>
+      <p>Des liens fraternels renforcés, des rires, des chants : des souvenirs gravés dans le cœur de chaque jeune KIRO présent à Nzilo.</p>
+    </div>
+    <dl>
+      <div><dt>Lieu</dt><dd>Cité de Nzilo, territoire de Mutshatsha, près de Kolwezi (Lualaba)</dd></div>
+      <div><dt>Groupe</dt><dd>KIRO Bakanja, décanat de Kolwezi, diocèse de Kolwezi</dd></div>
+      <div><dt>Statut</dt><dd>Édition 2026 terminée</dd></div>
+    </dl>
+  </section>
+
+  <section class="tools-panel" aria-labelledby="search-title">
+    <div class="tools-heading">
+      <p class="eyebrow">Retrouver un souvenir</p>
+      <h2 id="search-title">Explorer les photos</h2>
+      <p>Choisis une section pour retrouver les souvenirs du bivouac.</p>
+    </div>
+    <div class="photo-filters">
+      <label for="section-filter">Section</label>
+      <select id="section-filter">
+        <option value="all">Toutes les sections</option>
+        <option value="communes">Images communes</option>
+        <option value="bakayouki">Bakayouki</option>
+        <option value="youpi">Youpi</option>
+        <option value="gen">Gen</option>
+        <option value="aspirant">Aspirant</option>
+        <option value="dirigeant">Dirigeant</option>
+      </select>
+      <p id="filter-status" class="filter-status" aria-live="polite">Toutes les photos sont affichées par section.</p>
+    </div>
+  </section>
+
+  <div id="galeries"></div>
+
+  <section class="shared" id="vos-photos" aria-labelledby="shared-title">
+    <div class="cat-head">
+      <div><h2 id="shared-title">Photos des participants</h2><p>Tu as des photos du bivouac ? Envoie-les : elles s'affichent ici après validation.</p></div>
+      <button type="button" class="feature-button" id="photo-open">+ Ajouter une photo</button>
+    </div>
+    <p class="note" id="shared-note">Chargement des photos…</p>
+    <div class="strip" id="shared-strip"></div>
+  </section>
+
+  <section class="guestbook" id="livre-or">
+    <div class="guestbook-intro">
+      <p class="eyebrow">Nos souvenirs continuent</p>
+      <h2>Livre d'or</h2>
+      <p>Un mot, une gratitude ou un souvenir de Nzilo : laisse une trace de cette belle aventure.</p>
+      <p class="local-note">Les messages envoyés sont partagés avec les visiteurs après validation par un modérateur. N'indique aucune information privée.</p>
+    </div>
+    <form id="guestbook-form" class="guestbook-form">
+      <label for="guest-name">Ton nom ou surnom</label>
+      <input id="guest-name" name="name" maxlength="50" required autocomplete="nickname" placeholder="Ex. : Bienvenu">
+      <label for="guest-message">Ton message</label>
+      <textarea id="guest-message" name="message" maxlength="500" rows="4" required placeholder="Mon meilleur souvenir du bivouac…"></textarea>
+      <div class="honeypot" aria-hidden="true">
+        <label for="guest-website">Ne pas remplir</label>
+        <input id="guest-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="feature-button">Envoyer mon souvenir</button>
+      <p id="guestbook-status" class="filter-status" aria-live="polite">Connexion au livre d'or…</p>
+    </form>
+    <div class="guestbook-list-wrap">
+      <div class="guestbook-list-heading"><h3>Souvenirs partagés</h3><button id="refresh-messages" type="button" class="text-button">Actualiser</button></div>
+      <div id="guestbook-list" class="guestbook-list" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="foot-title">Merci à tous ceux qui ont vécu cette édition dans la joie 🙏</p>
+  <p>KIRO Congo, groupe Bakanja<br>Paroisse Sainte Barbe et Saint Éloi, décanat de Kolwezi</p>
+</footer>
+
+<div class="audio-player" role="group" aria-label="Musique d'ambiance">
+  <span class="audio-note" aria-hidden="true">♫</span>
+  <div class="audio-controls">
+    <strong>Ambiance du bivouac</strong>
+    <audio id="ambience-audio" controls preload="none">
+      <source src="assets/audio/ambiance.mp3" type="audio/mpeg">
+      Ton navigateur ne prend pas en charge la lecture audio.
+    </audio>
+  </div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo agrandie" hidden>
+  <button class="lb-x" aria-label="Fermer la photo">×</button>
+  <button class="lb-p" aria-label="Photo précédente">‹</button>
+  <img src="" alt="">
+  <button class="lb-n" aria-label="Photo suivante">›</button>
+  <p class="lb-c"></p>
+</div>
+
+<dialog id="photo-dialog" aria-labelledby="photo-title">
+  <form id="photo-form" class="photo-form">
+    <h2 id="photo-title">Ajouter une photo</h2>
+    <label for="photo-file">Ta photo</label>
+    <input id="photo-file" name="photo" type="file" accept="image/*" required>
+    <label for="photo-author">Ton nom ou surnom (facultatif)</label>
+    <input id="photo-author" name="author" maxlength="60" autocomplete="nickname">
+    <label for="photo-caption">Légende (facultatif)</label>
+    <input id="photo-caption" name="caption" maxlength="200">
+    <div class="honeypot" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+    <p class="local-note">Ta photo sera visible par tous après validation par un modérateur. Envoie seulement des photos du bivouac.</p>
+    <div class="photo-actions"><button type="submit" class="feature-button">Envoyer</button><button type="button" class="text-button" id="photo-close">Fermer</button></div>
+    <p id="photo-status" class="filter-status" aria-live="polite"></p>
+  </form>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="script.js" defer></script>
+<script src="supabase-config.js" defer></script>
+<script src="features.js" defer></script>
+<script src="photos.js" defer></script>
+</body>
+</html>
