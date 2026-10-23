@@ -1,147 +1,68 @@
-# 🏕️ BIVOUAC Nzilo 2026
+# Bivouac Nzilo 2026
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/communes/plus_822.jpg" alt="Bivouac Nzilo 2026" width="100%">
-</p>
+<img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/communes/plus_822.jpg" alt="Bivouac Nzilo 2026" width="100%">
 
-<h3 align="center">Une semaine de foi, de fraternité et d'aventure</h3>
+**Une semaine de foi, de fraternité et d'aventure.**
+Groupe KIRO Bakanja, paroisse Sainte Barbe et Saint Éloi, décanat de Kolwezi.
+Cité de Nzilo (Lualaba, RDC), du 9 au 16 août 2026.
 
-<p align="center">
-  <strong>Groupe KIRO BAKANJA</strong><br>
-  Paroisse Sainte Barbe et Saint Éloi · Décanat de Kolwezi
-</p>
-
-<p align="center">
-  📍 Cité de Nzilo, Lualaba, RDC<br>
-  📅 Du 9 au 16 août 2026
-</p>
-
-<p align="center">
-  <a href="https://bienvenu945.github.io/BIVOUAC-NZILO-2026/"><strong>🌐 Visiter le site</strong></a>
-  ·
-  <a href="https://github.com/Bienvenu945/BIVOUAC-NZILO-2026"><strong>💻 Voir le code source</strong></a>
-</p>
+[Visiter le site](https://bienvenu945.github.io/BIVOUAC-NZILO-2026/) | [Voir le code source](https://github.com/Bienvenu945/BIVOUAC-NZILO-2026)
 
 ---
 
-## 📖 À propos du projet
+## À propos
 
-**BIVOUAC Nzilo 2026** est un site web rétrospectif consacré au bivouac annuel du Groupe KIRO BAKANJA, rattaché à la paroisse Sainte Barbe et Saint Éloi, dans le décanat de Kolwezi.
+Ce site garde la mémoire du bivouac annuel du groupe KIRO Bakanja : une semaine de prière, de jeux, de chants, de feux de camp et de vie communautaire. Il rassemble les photos des participants pour que chacun puisse revivre les moments forts de cette édition.
 
-Organisée du **9 au 16 août 2026** à la Cité de Nzilo, cette retraite a été une semaine de prière, de jeux, de chants, de feux de camp, de fraternité et de vie communautaire.
+## Les six sections
 
-Ce site a été conçu pour conserver la mémoire de cette édition, rassembler les photographies des participants et permettre à chacun de revivre les moments forts de cette aventure.
+Chaque section a sa couleur, son dossier de photos et sa propre bande sur le site.
 
-## ✨ Fonctionnalités
+<table>
+  <tr>
+    <td align="center"><img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/communes/plus_822.jpg" alt="Communes" width="100%"><br><b>Communes</b><br><code>images/communes/</code><br>jaune</td>
+    <td align="center"><img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/bakayouki/photo_062.JPG" alt="Bakayouki" width="100%"><br><b>Bakayouki</b><br><code>images/bakayouki/</code><br>vert</td>
+    <td align="center"><img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/youpi/photo_006.JPG" alt="Youpi" width="100%"><br><b>Youpi</b><br><code>images/youpi/</code><br>rouge</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/gen/plus_1093.jpg" alt="Gen" width="100%"><br><b>Gen</b><br><code>images/gen/</code><br>bleu</td>
+    <td align="center"><img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/aspirant/photo_001.JPG" alt="Aspirant" width="100%"><br><b>Aspirant</b><br><code>images/aspirant/</code><br>orange</td>
+    <td align="center"><img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/dirigeant/photo_005.JPG" alt="Dirigeant" width="100%"><br><b>Dirigeant</b><br><code>images/dirigeant/</code><br>blanc</td>
+  </tr>
+</table>
 
-- **Présentation de l'événement :** dates, lieu, organisateur et ambiance du bivouac.
-- **Galerie photographique :** affichage des souvenirs répartis en six catégories.
-- **Chargement progressif :** affichage des photos par lots afin de préserver la fluidité de navigation.
-- **Galerie dynamique :** récupération des photographies depuis le dépôt GitHub, sans devoir modifier le code à chaque ajout pris en charge.
-- **Design responsive :** interface adaptée aux téléphones, tablettes et ordinateurs.
-- **Navigation accessible :** menu mobile, rôles ARIA, lien d'évitement et annonces dynamiques.
+## Ce que fait le site
 
-## 🖼️ Les six catégories de la galerie
+- **Page d'accueil en six bandes :** une bande de couleur par section, teintée par sa première photo, qui mène directement à sa galerie.
+- **Galeries en défilement horizontal :** les photos se parcourent d'un geste du doigt ou à la souris, et se chargent par lots de 12 avec le bouton « Voir plus ».
+- **Visionneuse plein écran :** flèches à l'écran, touches ← et →, Échap pour fermer.
+- **Galeries automatiques :** les photos sont lues directement dans le dépôt GitHub, sans toucher au code.
+- **Responsive :** les bandes s'empilent sur téléphone, avec une mise en page adaptée aux tablettes et aux ordinateurs.
+- **Accessible :** lien d'évitement, navigation au clavier, textes alternatifs, animations coupées si le système le demande.
+- **Mesure d'audience :** comptage des visites avec Cloudflare Web Analytics.
 
-Les photographies sont organisées dans six sous-dossiers distincts. Voici un aperçu de chaque catégorie.
-
-### 1. COMMUNES
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/communes/plus_822.jpg" alt="Catégorie Communes" width="80%">
-</p>
-
-**Dossier :** `images/communes/`
-
-### 2. BAKAYOUKI
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/bakayouki/photo_062.JPG" alt="Catégorie Bakayouki" width="80%">
-</p>
-
-**Dossier :** `images/bakayouki/`
-
-### 3. YOUPI
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/youpi/photo_006.JPG" alt="Catégorie Youpi" width="80%">
-</p>
-
-**Dossier :** `images/youpi/`
-
-### 4. GEN
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/gen/plus_1093.jpg" alt="Catégorie Gen" width="80%">
-</p>
-
-**Dossier :** `images/gen/`
-
-### 5. ASPIRANT
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/aspirant/photo_001.JPG" alt="Catégorie Aspirant" width="80%">
-</p>
-
-**Dossier :** `images/aspirant/`
-
-### 6. DIRIGEANT
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Bienvenu945/BIVOUAC-NZILO-2026/main/images/dirigeant/photo_005.JPG" alt="Catégorie Dirigeant" width="80%">
-</p>
-
-**Dossier :** `images/dirigeant/`
-
-*Les images ci-dessus sont des photographies représentatives référencées directement depuis le dépôt GitHub. Tu peux les remplacer par d'autres clichés pour mettre en avant des moments plus précis.*
-
-## 📁 Structure du dépôt
+## Structure du dépôt
 
 ```text
 BIVOUAC-NZILO-2026/
 ├── .gitattributes
-├── index.html
 ├── README.md
+├── index.html      contenu et structure
+├── style.css       design et responsive
+├── script.js       galeries et visionneuse
 └── images/
     ├── communes/
-    │   ├── plus_822.jpg
-    │   ├── photo_035.JPG
-    │   ├── photo_063.JPG
-    │   └── ...
     ├── bakayouki/
-    │   ├── photo_062.JPG
-    │   ├── photo_064.JPG
-    │   └── ...
     ├── youpi/
-    │   ├── photo_006.JPG
-    │   ├── photo_009.JPG
-    │   └── ...
     ├── gen/
-    │   ├── photo_030.JPG
-    │   ├── photo_036.JPG
-    │   └── ...
     ├── aspirant/
-    │   ├── photo_001.JPG
-    │   ├── photo_002.JPG
-    │   └── ...
     └── dirigeant/
-        ├── photo_005.JPG
-        ├── photo_014.JPG
-        └── ...
 ```
 
-> **Remarque :** cette arborescence est illustrative. Les fichiers affichés sont des exemples et les points de suspension représentent les autres photographies présentes dans les dossiers.
+## Ajouter des photos
 
-## 📸 Ajouter de nouvelles photographies
-
-La galerie est conçue pour récupérer les images depuis GitHub. Pour ajouter des photos :
-
-1. Place les nouvelles images dans le sous-dossier correspondant à leur catégorie.
-2. Enregistre les modifications dans Git.
-3. Envoie-les sur GitHub.
-4. Vérifie le site en ligne après le déploiement.
-
-Exemple en ligne de commande :
+1. Place les images dans le dossier de leur section (`.jpg`, `.jpeg`, `.png`, `.webp` ou `.gif`).
+2. Envoie-les sur GitHub :
 
 ```bash
 git add images/
@@ -149,67 +70,60 @@ git commit -m "Ajout de nouvelles photos"
 git push
 ```
 
-Aucune modification de `index.html` n'est nécessaire pour les ajouts ordinaires, tant que les photos sont placées dans les dossiers pris en charge par la galerie.
+3. Attends le déploiement de GitHub Pages, puis vérifie le site en ligne.
 
-Le chargement des images est effectué progressivement afin de limiter le poids affiché au premier chargement. En cas d'indisponibilité de l'API GitHub, le comportement de secours prévu par le site peut prendre le relais.
+Les photos s'affichent dans l'ordre alphabétique des noms de fichiers (`photo_2` avant `photo_10`). Aucune modification du code n'est nécessaire.
 
-## 🎨 Design et identité visuelle
+## Design
 
-L'identité graphique s'inspire de la nature, du camping et du scoutisme.
+L'affiche tient sur une idée : une couleur par section.
 
-- **Vert forêt :** nature, espérance et vie communautaire.
-- **Orange marigold :** chaleur, énergie et convivialité.
-- **Tons kaki et crème :** esprit bivouac et sobriété visuelle.
+| Élément | Valeur |
+|---|---|
+| Encre et pied de page | `#0E2F2C` |
+| Fond | `#E8EEEA` |
+| Communes | `#D9A91C` |
+| Bakayouki | `#1E7A3B` |
+| Youpi | `#C62828` |
+| Gen | `#1C5FA8` |
+| Aspirant | `#D97217` |
+| Dirigeant | `#FFFFFF` |
 
-**Typographies :**
+Typographies : **Archivo** (largeur étendue, graisse 900) pour les titres, **Hanken Grotesk** pour les textes.
 
-- Anton pour les titres.
-- Karla pour les textes courants.
-
-L'interface est responsive et comprend un menu mobile ainsi que plusieurs améliorations d'accessibilité.
-
-## 🛠️ Technologies utilisées
+## Technologies
 
 | Technologie | Utilisation |
 |---|---|
-| HTML5 | Structure et contenu du site |
-| CSS3 | Mise en page, couleurs et adaptation aux écrans |
-| JavaScript | Interactions et chargement dynamique de la galerie |
-| GitHub Contents API | Récupération des contenus du dépôt |
-| GitHub Pages | Hébergement gratuit du site |
-| Google Fonts | Chargement des polices Anton et Karla |
+| HTML5, CSS3 | Structure, mise en page et design |
+| JavaScript | Galeries, visionneuse, aucune dépendance |
+| API GitHub Contents | Lecture des photos du dépôt |
+| GitHub Pages | Hébergement gratuit |
+| Google Fonts | Archivo et Hanken Grotesk |
+| Cloudflare Web Analytics | Comptage des visites |
 
-Le site est construit autour d'un fichier principal `index.html` qui regroupe le HTML, le CSS et le JavaScript. Aucune installation de dépendances n'est nécessaire.
+## Personnalisation
 
-## ✏️ Personnalisation
+- **Textes et infos pratiques :** section `#infos` dans `index.html`.
+- **Couleurs :** variables `:root` et règles `[data-sec=...]` dans `style.css`.
+- **Sections et paramètres :** tableau `CATS` et constantes en haut de `script.js` (`USER`, `REPO`, `BATCH`).
 
-Pour modifier le contenu du site, ouvre `index.html`.
+Pour ajouter une septième section, il faut trois choses qui portent le même nom : un dossier dans `images/`, une entrée dans `CATS` et une règle `[data-sec=nom]` dans `style.css`.
 
-- **Informations pratiques :** section `#infos`.
-- **Présentation de l'événement :** section `#a-propos`.
-- **Galerie :** section `#galerie` et son code JavaScript.
-- **Couleurs :** règles CSS définies dans le fichier.
-- **Navigation mobile :** code HTML, CSS et JavaScript du menu.
+## Limite à connaître
 
-Pour modifier une catégorie, veille à conserver la cohérence entre son nom, son dossier et la logique de chargement des images.
+Le site interroge l'API GitHub à chaque visite, à raison d'une requête par section. GitHub limite ces requêtes sans authentification, par adresse IP. Si cette limite est atteinte, par exemple sur un réseau partagé par beaucoup de visiteurs, une galerie peut afficher « Galerie indisponible » jusqu'au retour à la normale. Un rechargement un peu plus tard règle le problème.
 
-## 🚀 Hébergement
+## Hébergement
 
-Le site est publié gratuitement grâce à GitHub Pages.
+- Site : https://bienvenu945.github.io/BIVOUAC-NZILO-2026/
+- Dépôt : https://github.com/Bienvenu945/BIVOUAC-NZILO-2026
 
-- 🌐 **Site public :** https://bienvenu945.github.io/BIVOUAC-NZILO-2026/
-- 💻 **Dépôt source :** https://github.com/Bienvenu945/BIVOUAC-NZILO-2026
+## Auteur
 
-## 👤 Auteur
-
-**Bienvenu Kalenga Kamoy Bienvenu**  
-Étudiant en électromécanique à la Faculté Polytechnique de l'Université de Kolwezi.
-
-Site conçu et déployé pour le Groupe KIRO BAKANJA, dans le but de préserver les souvenirs du Bivouac Nzilo 2026.
+**Bienvenu Kalenga Kamoy Bienvenu**, étudiant en électromécanique à la Faculté Polytechnique de l'Université de Kolwezi.
+Site conçu et déployé pour le groupe KIRO Bakanja, pour garder vivants les souvenirs du Bivouac Nzilo 2026.
 
 ---
 
-<p align="center">
-  <strong>🏕️ KIRO BAKANJA · NZILO 2026</strong><br>
-  <em>Des souvenirs partagés, une fraternité qui demeure.</em>
-</p>
+**KIRO Bakanja, Nzilo 2026.** *Des souvenirs partagés, une fraternité qui demeure.*
