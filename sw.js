@@ -34,9 +34,15 @@ self.addEventListener("fetch", event => {
   const request = event.request;
   if (request.method !== "GET") return;
 
-  const url = new URL(request.url);
-  // Ne pas mettre en cache les appels API externes ni la bibliothèque Supabase CDN.
-  if (url.origin !== self.location.origin) return;
+  // Laisser le navigateur gérer directement les fichiers audio
+// et les requêtes partielles nécessaires à leur lecture.
+if (
+  request.destination === "audio" ||
+  request.headers.has("range") ||
+  /\.(mp3|m4a|ogg|wav)$/i.test(url.pathname)
+) {
+  return;
+}
   // La page de modération n'est jamais mise en cache.
   if (url.pathname.endsWith("/admin.html")) return;
 
