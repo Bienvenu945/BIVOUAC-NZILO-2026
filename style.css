@@ -6,12 +6,12 @@
   --paper:#E8EEEA;
   --pad:clamp(18px,5vw,72px);
 }
-[data-sec=communes]{--c:#D9A91C;--fg:#10201A}
+[data-sec=communes]{--c:#D9A91C;--fg:#fff}
 [data-sec=bakayouki]{--c:#1E7A3B;--fg:#fff}
 [data-sec=youpi]{--c:#C62828;--fg:#fff}
 [data-sec=gen]{--c:#1C5FA8;--fg:#fff}
-[data-sec=aspirant]{--c:#D97217;--fg:#10201A}
-[data-sec=dirigeant]{--c:#fff;--fg:#10201A}
+[data-sec=aspirant]{--c:#D97217;--fg:#fff}
+[data-sec=dirigeant]{--c:#fff;--fg:#fff}
 
 *{box-sizing:border-box;margin:0;padding:0}
 [hidden]{display:none!important}
